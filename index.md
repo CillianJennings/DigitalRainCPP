@@ -13,7 +13,7 @@ I used the object oriented programming style in this project. This is what the f
 <img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/DigitalRain.mp4" width="400" height="300">
 
 # Design and Test
-
+The design of this project was assisted by ai tools, where I discovered console screen bu
 
 # The Algorithm
 
@@ -29,12 +29,5 @@ Font can be *Italic* or **Bold**.
 
 
 Hyperlinks look like this: [GitHub Help](https://help.github.com/).
-
-A bullet list:
-
-- vectors
-- algorithms
-- iterators
-
 
 <img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/DigitalRain.png" width="400" height="300">
