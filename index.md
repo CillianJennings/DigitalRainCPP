@@ -1,13 +1,16 @@
 ---
 layout: post
-title: A Project in Modern C++
-tags: cpp coding project
-categories: demo
+title: Digital Rain C++ Project
+tags: Cillian Jennings
+categories: test
 ---
 
-This is my first paragraph...
 
-## This is a Heading
+
+## Introduction
+
+
+## The Algorithm
 
 This is a paragraph. Add an empty line to start a new paragraph.
 
@@ -23,6 +26,5 @@ A bullet list:
 - algorithms
 - iterators
 
-You can add an impage that has been uploaded to the repository in a /docs/assets/images folder.
 
 <img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/DigitalRain.png" width="400" height="300">
