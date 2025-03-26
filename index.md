@@ -13,7 +13,7 @@ I used the object oriented programming style in this project. This is what the f
 <img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/DigitalRain.mp4" width="400" height="300">
 
 # Design and Test
-The design of this project was assisted by ai tools, where I discovered console screen bu
+The design of this project was assisted by ai tools, where I discovered console screen buffering or double buffering. T
 
 # The Algorithm
 
