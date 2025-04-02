@@ -37,6 +37,15 @@ In other words it's to prevent columns just appearing on the console instead of 
 This function moves the console cursor to the specified position. A COORD structure is created to hold the x and y coords. Then the x and y parameters are assigned to the structure.
 Windows API function updates the consoles internal cursor position so that the text output will be at the specified coords.
 
+<img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/DoubleBuffering3.png">
+
+The above code first starts by determining which buffer is currently inactive. It then clears the entire buffer by filling it with space characters. Finally it sets the default colour of
+the inactive buffer to dark green. This ensures that anything not drawn in another colour will appear dark green.
+
+<img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/DoubleBuffering4.png">
+
+This code simply swaps the console buffers, making the previously inactive buffer the new active buffer.
+
 # The Algorithm
 
 <img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/Algorithm.png">
