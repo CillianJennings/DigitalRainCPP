@@ -68,6 +68,13 @@ During the development of this digital rain project I encountered a few problems
 
 
 # Modern C++ insight & reflection
+To conclude, I really enjoyed working on this project. It was definitely a challenge, however I felt that I learned quite a bit and improved my C++ skills.
+There were a number of issues and bugs throughout the project, but that was all part of the learning process, and in the end I think the final product turned out 
+pretty good. The practical labs done throughout the last few weeks definitely helped a lot with the project and I would have been lost without them.
 
+One change I wouldmake if I were to do this again is when writing the blog, do it as I go along rather than finishing all the coding and then doing the blog at the end. It made writing
+the blog more difficult than it has to be, as I had to try and remember problems, and the previous versions of the project at the very end. The project lasted a few weeks so remembering
+everything done from a few weeks ago was difficult. It would have been better to make changes to the blog as I went along, then I could have immediately document problems I had, and gone
+in to more detail on why I did something.
 
 
