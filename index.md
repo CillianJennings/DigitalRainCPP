@@ -18,11 +18,9 @@ Once the new frame is completely drawn in the inactive buffer, the program swaps
 while the previously active buffer becomes the new drawing surface.
 The purpose of double buffering it to eliminate flickering in the console. My first version of digital rain was very flickery and not very pleasant to look at, and double buffering solved that.
 
-
 <img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/DoubleBuffering1.png" width="400" height="300">
 The code snippet above where the two console screen buffers are created using the windows API function. It has various parameters that are required and are shown in the microsoft webpage linked above.
 The first is the access, in this case both read and write. The second is the share mode, 0 meaning no sharing. The third is the security attributes, NULL being the default. The fourth is the buffer type which only has this one supported type. The fifth is reserved which should be NULL.
-
 
 <img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/DoubleBuffering2.png">
 
