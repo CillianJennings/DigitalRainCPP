@@ -23,22 +23,39 @@ The code snippet above where the two console screen buffers are created using th
 The first is the access, in this case both read and write. The second is the share mode, 0 meaning no sharing. The third is the security attributes, NULL being the default. The fourth is the buffer type which only has this one supported type. The fifth is reserved which should be NULL.
 
 <img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/DoubleBuffering2.png">
+The code snippet above configures the dimensions of the console screen buffers and the visible window size. BufferSize specifies how many colums and rows each buffer can hold. 
+1 is taken away from the width and height to correctly cover the entire buffer without going out of bounds. For example the buffer width is 120 therfore the columns are numbered 0-119.
+Buffer 0 is set as the currently displayed active buffer.
 
+<img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/Initialise.png">
+The code snippet above initialises columns with random positions and lengths. The length of the column is set to be between 6 and 10. The -10 in the last line is so the columns are drawn in above the top of the window.
+In other words it's to prevent columns just appearing on the console instead of falling down from the top.
 
+<img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/SetCursorPos.png">
+This function moves the console cursor to the specified position. A COORD structure is created to hold the x and y coords. Then the x and y parameters are assigned to the structure.
+Windows API function updates the consoles internal cursor position so that the text output will be at the specified coords.
 
 # The Algorithm
 
+<img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/Algorithm.png">
+This is the main algorithm or piece of code that draws the "rain". The first for loop iterates through all columns where each column is one vertical stream of characters. 
+The next for loop goes through the number of characters that make up the column. Then the actual vertical position on the screen is calculated by adding the columns top position and the character index.
+The if statement checks of the character is within the visible console area (between row 0 and the height). The console cursor position function is called. Then the colour of the character is chosen. If its the last character in the column its white, otherwise it randomly chooses between light green and dark green. Next the character is chosen randomly from the characters listed in validChars, where it then writes to the inactive buffer.
+Finally after drawing all the characters in the column, startY is increased so the column will appear one row lower on the next frame.
 
 # Problem Solving
+
+During the development of this digital rain project I encountered a few problems that needed to be tackled.
+
+1. Screen flickering: The biggest problem I had at the beginning was definitely how flickery the screen was. It wasn't nice to look at and took away from the animation.
+   The solution I found through the assitance of ai tools and the internet was double buffering. Which basically creates two buffers and draws the "rain" to the inactive buffer while the active
+   buffer is shown on the console. The two buffers then just switch back and forth.
+2. Incorrect Characters: At one point the characters being printed were only chinese/japanese characters which weren't what I had specified in validChars. What fixed the problem was switching from
+   WriteConsole to WriteConsoleA which is the ANSI version. This made sure that single-byte char's are treated as ANSI/ASCII. It appeared the problem was WriteConsole may have been mapping to WriteConsoleW
+   (wide version). Due to passing in 1-byte chars, this ended up displaying the wrong glyphs.
 
 
 # Modern C++ insight & reflection
 
 
 
-Font can be *Italic* or **Bold**.  width="400" height="300
-
-
-Hyperlinks look like this: [GitHub Help](https://help.github.com/).
-
-<img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/DigitalRain.png" width="400" height="300">
