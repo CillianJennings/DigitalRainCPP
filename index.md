@@ -2,7 +2,6 @@
 layout: post
 title: Digital Rain C++ Project
 tags: Cillian Jennings
-categories: test
 ---
 
 # Introduction
