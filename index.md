@@ -5,8 +5,6 @@ tags: Cillian Jennings
 categories: test
 ---
 
-
-
 # Introduction
 This is the blog of my C++ Programming project on Digital Rain. The aim of this project was to create a digital rain as seen in the movie "The Matrix". 
 I used the object oriented programming style in this project. This is what the final product looks like:
@@ -19,7 +17,13 @@ This works by creating two seperate memory buffers, one is visible (active buffe
 Once the new frame is completely drawn in the inactive buffer, the program swaps the roles of the two buffers. The inactive buffer becomes active and is displayed, 
 while the previously active buffer becomes the new drawing surface.
 The purpose of double buffering it to eliminate flickering in the console. My first version of digital rain was very flickery and not very pleasant to look at, and double buffering solved that.
-![image](https://github.com/user-attachments/assets/c5dc0e9c-c5d7-46d2-8dd1-83c56e1af738)
+
+<img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/DoubleBuffering1.png" width="400" height="300">
+This code snippet is where two console screen buffers are created using the windows API function. It has various parameters that are required and are shown in the microsoft webpage linked above.
+The first is the access, in this case both read and write. The second is the share mode, 0 meaning no sharing. The third is the security attributes, NULL being the default. The fourth is the buffer type which only has this one supported type. The fifth is reserved which should be NULL.
+
+<img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/DoubleBuffering2.png" width="400" height="300">
+
 
 
 # The Algorithm
