@@ -3,7 +3,7 @@ title: Digital Rain Modern C++ Project Blog
 author:
   name: Cillian Jennings
   email: G00404411@atu.ie
-description: "A blog."
+description: ""
 
 # Build settings
-remote_theme: jekyll/minima
+remote_theme: pages-themes/hacker
