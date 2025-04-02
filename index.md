@@ -9,7 +9,7 @@ categories: test
 This is the blog of my C++ Programming project on Digital Rain. The aim of this project was to create a digital rain as seen in the movie "The Matrix". 
 I used the object oriented programming style in this project. This is what the final product looks like:
 
-<img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/DigitalRain.gif" width="400" height="300">
+<img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/DigitalRain.gif">
 
 # Design and Test
 The design of this project was assisted by ai tools, where I discovered console screen buffering or double buffering, [Microsoft Screen Buffering](https://learn.microsoft.com/en-us/windows/console/createconsolescreenbuffer).
@@ -22,7 +22,7 @@ The purpose of double buffering it to eliminate flickering in the console. My fi
 This code snippet is where two console screen buffers are created using the windows API function. It has various parameters that are required and are shown in the microsoft webpage linked above.
 The first is the access, in this case both read and write. The second is the share mode, 0 meaning no sharing. The third is the security attributes, NULL being the default. The fourth is the buffer type which only has this one supported type. The fifth is reserved which should be NULL.
 
-<img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/DoubleBuffering2.png" width="400" height="300">
+<img src="https://raw.githubusercontent.com/cillianjennings/DigitalRainCPP/main/docs/assets/images/DoubleBuffering2.png">
 
 
 
@@ -36,7 +36,7 @@ The first is the access, in this case both read and write. The second is the sha
 
 
 
-Font can be *Italic* or **Bold**.
+Font can be *Italic* or **Bold**.  width="400" height="300
 
 
 Hyperlinks look like this: [GitHub Help](https://help.github.com/).
